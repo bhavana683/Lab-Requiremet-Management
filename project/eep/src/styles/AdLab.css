@@ -1,0 +1,45 @@
+/* Container styles */
+.Adcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: #D6E7DB;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Fields container styles */
+.fieldsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+}
+
+/* Textarea styles */
+.textarea {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 60%;
+  height: 100px;
+}
+
+/* Select styles */
+.select {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 30%;
+}

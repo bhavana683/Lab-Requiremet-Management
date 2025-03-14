@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+node_modules
+=======
+# Ignore all node_modules folders
+node_modules/
+project/eep/node_modules/
+
+# Ignore environment 
+>>>>>>> 21bda15 (Initial commit - adding backend and frontend)
