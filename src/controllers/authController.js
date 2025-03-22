@@ -1,6 +1,7 @@
 const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken")
 const User=require("../models/userModel")
+
 require('dotenv').config()
 
 const register=async(req,res)=>{
@@ -14,20 +15,20 @@ res.status(201).json({message:`User registered with user name${username}`})
 }*/
 
   try {
-    const { username, password, role } = req.body;
+    const { username, password, role,name,contact,designation,dob } = req.body;
 
     if (!username || !password || !role) {
       return res.status(400).json({ message: "Missing required fields" });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new User({ username, password: hashedPassword, role });
+    const newUser = new User({ username, password: hashedPassword, role,name,contact,designation,dob});
 
     await newUser.save();
     res.status(201).json({ message: `User registered with username ${username}` });
 
   } catch (error) {
-    console.error("Error during registration:", error); // 🔴 Print full error
+    console.error("Error during registration:", error); 
     res.status(500).json({ message: "Internal Server Error", error: error.message });
   }
 };
@@ -75,7 +76,7 @@ const ResetPassword=async(req,res)=>{
       else{
         console.log("user found")
       const hashedPassword = await bcrypt.hash(newpassword, 10);
-      user.password = hashedPassword;
+      user.password ={ hashedPassword};
       console.log(user.password)
       console.log(newpassword)
 

@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import SignIn
- from 'SignIn';
+import SignIn from 'SignIn';
 
 const ResetPassword = () => {
   const [formData, setFormData] = useState({
@@ -22,9 +21,9 @@ const ResetPassword = () => {
     e.preventDefault();
     try{
       const username=formData.username
-      const pass=formData.newpassword
-      const response=await axios.post("http://localhost:7001/api/auth/ResetPssword",{
-       username,pass
+      const newpassword=formData.newpassword
+      const response=await axios.post("http://localhost:7001/api/auth/ResetPassword",{
+       username,newpassword
         
       },{
         headers:{

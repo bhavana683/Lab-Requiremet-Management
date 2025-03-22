@@ -48,18 +48,18 @@ const userSchema = new mongoose.Schema(
     },
     contact: {
       type: Number,
-     // required:true;
+      //required:true,
       
-      unique: true, // Prevent duplicate phone numbers
+      //unique: true, // Prevent duplicate phone numbers
     },
     designation: {
       type: String,
-      //required:true;
+     
       
     },
     dob: {
       type: Date,
-      //required:true;
+      
      
     },
   },
